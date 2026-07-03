@@ -55,7 +55,7 @@ Response
 
 ---
 
-## 📦 Project structure
+## Project structure
 
 ```
 .
