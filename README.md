@@ -149,7 +149,6 @@ See the screenshots in [`docs/`](docs/): booking → admin page → confirmation
 │   ├── *.db                       # generated (gitignored)
 │   └── confirmed_reservations.txt # Stage 3 output (generated, gitignored)
 ├── tests/                  # pytest suite (68 tests)
-├── docs/                   # screenshots + presentation
 ├── .github/workflows/ci.yml
 ├── requirements.txt        # full runtime deps
 ├── requirements-dev.txt    # lean deps for the offline test suite
