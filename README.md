@@ -1,4 +1,4 @@
-# 🅿️ Parking RAG Chatbot — Stage 1
+# Parking RAG Chatbot — Stage 1
 
 An intelligent chatbot for a parking facility ("Astana Central Parking") built on
 a **Retrieval-Augmented Generation (RAG)** architecture with **LangChain** and
@@ -6,12 +6,9 @@ a **Retrieval-Augmented Generation (RAG)** architecture with **LangChain** and
 prices, hours, live availability), interactively collects reservation details,
 and protects sensitive data with a guardrail layer.
 
-This is **Stage 1** of a 4-stage project. Human-in-the-loop admin confirmation of
-reservations is planned for later stages; Stage 1 creates *pending* reservations.
-
 ---
 
-## ✨ Features
+## Features
 
 | Requirement | How it's met |
 |-------------|--------------|
@@ -27,7 +24,7 @@ reservations is planned for later stages; Stage 1 creates *pending* reservations
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Streamlit UI
@@ -80,7 +77,7 @@ Response
 │   ├── run_eval.py       # Recall@K / Precision@K / MRR / latency
 │   └── report.md         # generated report
 ├── tests/                # pytest suite (34 tests)
-├── docs/                 # design doc + presentation
+├── docs/                 # presentation
 ├── .github/workflows/ci.yml
 ├── requirements.txt
 └── .env.example
@@ -88,7 +85,7 @@ Response
 
 ---
 
-## 🚀 Setup
+## Setup
 
 Requires **Python 3.11 or 3.12**.
 
@@ -117,7 +114,7 @@ cp .env.example .env
 
 ---
 
-## ▶️ Usage
+## Usage
 
 ```bash
 # 1. Build the vector index from the knowledge base
@@ -139,7 +136,7 @@ Then ask, e.g.:
 
 ---
 
-## 🛡️ Guardrails (data protection)
+## Guardrails (data protection)
 
 Three layers prevent exposure of sensitive data:
 
@@ -157,7 +154,7 @@ system still works.
 
 ---
 
-## 📊 Evaluation
+## Evaluation
 
 ```bash
 python -m evaluation.run_eval    # writes evaluation/report.md
@@ -178,7 +175,7 @@ relevant documents; Recall and MRR are the headline retrieval-quality metrics.)
 
 ---
 
-## ✅ Tests
+## Tests
 
 ```bash
 pytest            # 34 tests, all offline (LLM & vector store mocked where needed)
@@ -190,7 +187,7 @@ stub-LLM run), and evaluation metrics.
 
 ---
 
-## 🧰 Tech stack
+## Tech stack
 
 Python · LangChain 1.x · LangGraph 1.x · OpenAI `gpt-4o-mini` · Milvus Lite ·
 SQLite · Microsoft Presidio · Streamlit · pytest · GitHub Actions.
