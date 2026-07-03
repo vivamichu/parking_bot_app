@@ -199,8 +199,7 @@ python -m parking_bot.orchestrator
 │   ├── *.db                       # generated (gitignored)
 │   └── confirmed_reservations.txt # confirmed-reservation store (generated, gitignored)
 ├── tests/                  # pytest suite (77 tests)
-├── docs/
-│   ├── ARCHITECTURE.md     # architecture, agent/server logic, deployment
+├── docs/     
 │   ├── presentation.pptx   # slide deck
 │   └── *.png               # screenshots
 ├── .github/workflows/ci.yml
