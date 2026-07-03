@@ -1,0 +1,21 @@
+# Secrets
+.env
+
+# Data artifacts (generated at runtime)
+data/*.db
+data/*.db.lock
+data/milvus_parking.db*
+*.sqlite
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# spaCy models are downloaded, not committed
+# OS
+.DS_Store

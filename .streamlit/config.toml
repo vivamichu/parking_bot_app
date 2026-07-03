@@ -1,0 +1,10 @@
+[server]
+# Disable the module file-watcher. Without this, Streamlit tries to introspect
+# every submodule of large libraries like `transformers` (pulled in by
+# sentence-transformers), producing noisy tracebacks for optional deps such as
+# torchvision that we don't use.
+fileWatcherType = "none"
+headless = true
+
+[browser]
+gatherUsageStats = false
