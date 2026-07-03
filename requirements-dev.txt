@@ -1,0 +1,20 @@
+# Lean dependency set for running the test suite (tests are fully offline;
+# the heavy vector-DB / embedding / UI deps are not needed to run pytest).
+langchain-core>=1.0.0
+langchain-text-splitters>=1.0.0
+langgraph>=1.0.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# Guardrails (regex fallback also works if these are absent)
+presidio-analyzer>=2.2.0
+presidio-anonymizer>=2.2.0
+
+# Admin REST server (Stage 2) + its FastAPI test client (needs httpx).
+# python-multipart is required for the HTML form (Form(...)) endpoint.
+fastapi>=0.110.0
+httpx>=0.27.0
+python-multipart>=0.0.9
+
+pytest>=8.0.0
+pytest-mock>=3.12.0
