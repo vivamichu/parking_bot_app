@@ -1,0 +1,17 @@
+[
+  {"question": "How many parking spaces are there in total?", "relevant": ["general_info.md"]},
+  {"question": "Do you have electric vehicle charging stations?", "relevant": ["general_info.md", "parking_details.md"]},
+  {"question": "Is the parking secure? Do you have CCTV?", "relevant": ["general_info.md", "parking_details.md"]},
+  {"question": "Where is the parking located? What is the address?", "relevant": ["location.md"]},
+  {"question": "How do I get to you by public transport?", "relevant": ["location.md"]},
+  {"question": "What are the GPS coordinates of the entrance?", "relevant": ["location.md"]},
+  {"question": "What types of parking spaces do you offer?", "relevant": ["parking_details.md"]},
+  {"question": "What is the maximum vehicle height allowed?", "relevant": ["parking_details.md"]},
+  {"question": "Which level has the car wash?", "relevant": ["parking_details.md", "general_info.md"]},
+  {"question": "How do I reserve a parking space?", "relevant": ["booking_process.md"]},
+  {"question": "What information do you need to make a booking?", "relevant": ["booking_process.md"]},
+  {"question": "Can I cancel my reservation and is there a fee?", "relevant": ["policies.md", "booking_process.md"]},
+  {"question": "What payment methods do you accept?", "relevant": ["policies.md"]},
+  {"question": "What is the speed limit inside the parking?", "relevant": ["policies.md"]},
+  {"question": "Are there spaces for people with disabilities?", "relevant": ["general_info.md", "parking_details.md"]}
+]

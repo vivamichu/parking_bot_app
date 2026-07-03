@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master, "stage_*", "stage-*"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    env:
+      # Tests run fully offline; embeddings (if exercised) use the local model,
+      # and the LLM is mocked, so no OPENAI_API_KEY is required.
+      EMBEDDING_PROVIDER: huggingface
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Download spaCy model (for Presidio guardrails)
+        run: python -m spacy download en_core_web_sm || echo "spaCy model unavailable; guardrails fall back to regex"
+
+      - name: Run tests
+        run: pytest -q
